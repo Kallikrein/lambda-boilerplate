@@ -1,0 +1,8 @@
+# Mac osX
+.DS_Store
+# npm
+node_modules
+# build folder
+build
+# env
+envAWS

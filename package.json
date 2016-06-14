@@ -1,0 +1,21 @@
+{
+  "name": "lambda-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "rm -rf build; mkdir build && cd src && zip -r ../build/archive.zip ./node_modules *.js",
+    "deploy": "env $(cat envAWS) node upload.js",
+    "start": "npm run lint && npm run zip && npm run deploy",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "author": "Thomas Charlat",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.3.18"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1"
+  }
+}
